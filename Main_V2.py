@@ -107,7 +107,7 @@ while running:
             running = False
         if event.type == pg.KEYDOWN:
             if event.key == pg.K_t:
-                mp_index = rd.choice(range(3))
+                mp_index = rd.choice(range(5))
                 Token = 0
                 mp_code = [[0 for _ in range(10)] for _ in range(10)]
                 for wall in maps[mp_index]:
