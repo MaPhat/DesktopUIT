@@ -17,10 +17,6 @@ play = False
 game_time = 0
 conf = False
 
-Sn_h = pg.image.load(r'C:\Users\22521\OneDrive\Desktop\KiNangNgheNghiep\Picture\Sn_h.png')
-Sn_b = pg.image.load(r'C:\Users\22521\OneDrive\Desktop\KiNangNgheNghiep\Picture\Sn_b.png')
-Point = pg.image.load(r'C:\Users\22521\OneDrive\Desktop\KiNangNgheNghiep\Picture\Point.png')
-Start = pg.image.load(r'C:\Users\22521\OneDrive\Desktop\KiNangNgheNghiep\Picture\Start.png')
 Sn_h = pg.image.load(r'.\Picture\Sn_h.png')
 Sn_b = pg.image.load(r'.\Picture\Sn_b.png')
 Point = pg.image.load(r'.\Picture\Point.png')
