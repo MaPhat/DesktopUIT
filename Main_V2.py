@@ -1,3 +1,4 @@
+
 with open('./map.txt','r') as file:
     map = file.read()
 for item in map.split('\n'):
