@@ -119,23 +119,6 @@ while running:
                 x,y = ranPoint(mp_code)
                 Snk_h = snake(Sn_h,x,y)
                 Sns = [Snk_h]
-                play = True
-                conf = False    
-                step_x = 0
-                step_y = 0          
-            if event.key == pg.K_UP and step_y == 0:
-                step_x = 0
-                step_y = -dis
-            if event.key == pg.K_DOWN and step_y == 0:
-                step_x = 0
-                step_y = dis
-            if event.key == pg.K_RIGHT and step_x == 0:
-                step_x = dis
-                step_y = 0
-            if event.key == pg.K_LEFT and step_x == 0:
-                step_x = -dis
-                step_y = 0
-    
     screen.fill((0, 0, 0))
     pg.draw.rect(screen,((255, 0, 0)),[0,0,height_scr,height_scr],dis)
 
