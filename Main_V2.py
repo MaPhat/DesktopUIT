@@ -9,7 +9,7 @@ height_scr = height + 2 * dis
 #-----#
 
 
-# sủa con rán chạy nhau
+# sửa con rắn chạy nhanh
 
 maps = []
 mp_index = 2
