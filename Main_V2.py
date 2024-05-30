@@ -17,14 +17,7 @@ play = False
 game_time = 0
 conf = False
 
-Sn_h = pg.image.load(r'.\Picture\Sn_h.png')
-Sn_b = pg.image.load(r'.\Picture\Sn_b.png')
-Point = pg.image.load(r'.\Picture\Point.png')
-Start = pg.image.load(r'.\Picture\Start.png')
-step_x = 0
-step_y = 0
-p_x = 0
-p_y = 0
+# sủa con rán chạy nhau
 
 maps = []
 mp_index = 2
