@@ -7,15 +7,7 @@ dis = 8
 height = 320
 height_scr = height + 2 * dis
 #-----#
-#xem lai phan nay
-pg.init
-clock = pg.time.Clock()
-screen = pg.display.set_mode((height_scr,height_scr))
-pg.display.set_caption("Snake")
-running = True
-play = False
-game_time = 0
-conf = False
+
 
 # sủa con rán chạy nhau
 
