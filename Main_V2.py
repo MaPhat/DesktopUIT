@@ -1,18 +1,4 @@
-import pygame as pg
-import random as rd
 
-#const#
-speed = 200
-dis = 8
-height = 320
-height_scr = height + 2 * dis
-#-----#
-
-
-# sủa con rán chạy nhau
-#nên làm lại phần này
-maps = []
-mp_index = 2
 with open('./map.txt','r') as file:
     map = file.read()
 for item in map.split('\n'):
