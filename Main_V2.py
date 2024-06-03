@@ -1,4 +1,33 @@
-#đã chỉnh lại phần này
+import pygame as pg
+import random as rd
+
+#const#
+speed = 200
+dis = 8
+height = 320
+height_scr = height + 2 * dis
+#-----#
+
+pg.init
+clock = pg.time.Clock()
+screen = pg.display.set_mode((height_scr,height_scr))
+pg.display.set_caption("Snake")
+running = True
+play = False
+game_time = 0
+conf = False
+
+Sn_h = pg.image.load(r'.\Picture\Sn_h.png')
+Sn_b = pg.image.load(r'.\Picture\Sn_b.png')
+Point = pg.image.load(r'.\Picture\Point.png')
+Start = pg.image.load(r'.\Picture\Start.png')
+step_x = 0
+step_y = 0
+p_x = 0
+p_y = 0
+
+maps = []
+mp_index = 2
 with open('./map.txt','r') as file:
     map = file.read()
 for item in map.split('\n'):
@@ -78,7 +107,7 @@ while running:
             running = False
         if event.type == pg.KEYDOWN:
             if event.key == pg.K_t:
-                mp_index = rd.choice(range(5))
+                mp_index = rd.choice(range(3))
                 Token = 0
                 mp_code = [[0 for _ in range(10)] for _ in range(10)]
                 for wall in maps[mp_index]:
@@ -90,6 +119,23 @@ while running:
                 x,y = ranPoint(mp_code)
                 Snk_h = snake(Sn_h,x,y)
                 Sns = [Snk_h]
+                play = True
+                conf = False    
+                step_x = 0
+                step_y = 0          
+            if event.key == pg.K_UP and step_y == 0:
+                step_x = 0
+                step_y = -dis
+            if event.key == pg.K_DOWN and step_y == 0:
+                step_x = 0
+                step_y = dis
+            if event.key == pg.K_RIGHT and step_x == 0:
+                step_x = dis
+                step_y = 0
+            if event.key == pg.K_LEFT and step_x == 0:
+                step_x = -dis
+                step_y = 0
+    
     screen.fill((0, 0, 0))
     pg.draw.rect(screen,((255, 0, 0)),[0,0,height_scr,height_scr],dis)
 
